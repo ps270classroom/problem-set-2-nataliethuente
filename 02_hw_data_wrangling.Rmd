@@ -47,12 +47,11 @@ Use `dplyr` functions to create a table with the number of candidates in each ty
 
 ```{r}
 library(tidyverse)
-fb_ads <- read.csv("data/fb_ads.csv")
+fb_ads <- read_csv("data/fb_ads.csv")
 incumbency_table <- fb_ads |>
   count(incumbency) |>
   knitr::kable()
 incumbency_table
-fb_ads
 ```
 
 There are 7,014 candidates
