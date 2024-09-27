@@ -135,7 +135,7 @@ You do not need to exactly match the labels, but you should have informative lab
 
 ```{r}
 fb_top_plot <- fb_ads |>
-  filter(office == "US House")
+  filter(office == "US House") |>
   arrange(desc(impressions_millions)) |>
   head(15) |>
   mutate(reorder(cand_name_last, impressions_millions)) |>
